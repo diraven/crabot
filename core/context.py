@@ -17,7 +17,7 @@ class Context(commands.Context):
             color=discord.Color.blue(),
         )
         embed.set_footer(text=DISCONTINUED)
-        return await self.send(embed)
+        return await self.send(embed=embed)
 
     async def post_warning(self, text: str):
         """Send warning message."""
@@ -27,7 +27,7 @@ class Context(commands.Context):
             color=discord.Color.orange(),
         )
         embed.set_footer(text=DISCONTINUED)
-        return await self.send(embed)
+        return await self.send(embed=embed)
 
     async def post_error(self, text: str):
         """Send error message."""
@@ -37,7 +37,7 @@ class Context(commands.Context):
             color=discord.Color.red(),
         )
         embed.set_footer(text=DISCONTINUED)
-        return await self.send(embed)
+        return await self.send(embed=embed)
 
     async def react_ok(self) -> discord.Reaction:
         """Add ok hand reaction to the message."""
